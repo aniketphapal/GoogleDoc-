@@ -11,97 +11,140 @@
                 height: 100%;
             }
             #bg {
-                background-color: lightblue;
-                height: 100%;
+                background-image: url(https://aniketphapal.github.io/GoogleDoc-/pink.jpg);
                 width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
-            .container {
+            #container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-            #robot {
-                background-color: white;
-                height: 410px;
-                width: 400px;
-                border: 2px solid black;
-            }
-            .robot{
+            .container {
                 position: absolute;
-                top: 100px;
+                top: 40%;
+                left: 43%;
             }
-            #img {
+            .open .lid {
+                transform: rotateX(90deg);
+            }
+            #head {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #robo {
                 position: absolute;
-                top: -21px;
-                filter: brightness(120%);
+                top: 50%;
+                left: 35%;
+                animation: robo 3s ease forwards;
             }
-            .form {
+            #pookie {
                 position: absolute;
-                top: 300px;
+                top: 50%;
+                left: 42%;
+                visibility: hidden;
+                animation: pookie 3s ease 1s forwards;
             }
-            #form {
+            #chutku {
                 position: absolute;
-                top: 370px;
-                border: 2px solid black;
-                padding: 5px;
-                width: 250px;
-                height: 50px;
-                text-align: center left;
+                top: 50%;
+                left: 42%;
+                visibility: hidden;
+                animation: chutku 2s ease 2s forwards;
             }
-            #capt {
+            #bacha {
                 position: absolute;
-                top: 355px;
+                top: 50%;
+                left: 42%;
+                visibility: hidden;
+                animation: bacha 2s ease 3s forwards;
             }
-            #button {
-                border: 2px solid white;
+            #my {
                 position: absolute;
-                top: 450px;
+                top: 50%;
+                left: 42%;
+                visibility: hidden;
+                animation: my 2s ease 4s forwards;
             }
-            #re {
+            #click {
                 position: absolute;
-                top: 106px;
+                top: 80%;
+                left: 49.5%;
             }
-            #box {
-                position: absolute;
-                top: 375px;
-                left: 820px;
+            @keyframes robo {
+                0% {font-size: 0; left: 50%;}
+                100% {font-size: 28px; top: 20%; left: 5%;}
             }
-            #form:hover {
-                background-color: black;
-                color: white;
+            @keyframes pookie {
+                from {visibility: hidden; font-size: 0; left: 50%;}
+                to {visibility: visible; font-size: 35px; top: 25%; left: 20%;}
             }
-            #button:hover {
-                border: 5px solid white;
+            @keyframes chutku {
+                0% {visibility: hidden; font-size: 0; left: 50%;}
+                100% {visibility: visible; font-size: 25px; top: 2%; left: 10%;}
+            }
+            @keyframes bacha {
+                0% {visibility: hidden; font-size: 0; left: 50%;}
+                100% {visibility: visible; font-size: 20px; top: 10%; left: 60%;}
+            }
+            @keyframes my {
+                0% {visibility: hidden; font-size: 0; left: 50%;}
+                100% {visibility: visible; font-size: 35px; top: 13%; left: 20%;}
             }
             @media screen and (max-width: 600px) {
-                #box{
+                .container {
                     position: absolute;
-                    left: 320px;
+                    left: 130px;
+                }
+                #robo {
+                    position: absolute;
+                    left: 15%;
+                }
+                #pookie {
+                    position: absolute;
+                    left: 20%;
+                }
+                #chutku {
+                    position: absolute;
+                    left: 20%;
+                }
+                #bacha {
+                    position: absolute;
+                    left: 20%;
+                }
+                #my {
+                    position: absolute;
+                    left: 20%;
+                }
+                #click {
+                    position: absolute;
+                    left: 47%;
                 }
             }
         </style>
     </head>
     <body>
         <div id="bg"></div>
-        <div class="container">
-            <div id="robot" class="robot">
-                <h1 id="img"><img src="./Assets/captcha1.png" alt="image" width="400px" height="300px"></h1>
-            </div>
-            <div id="re">
-                <img src="./Assets/recaptcha1.png" alt="image" width="150px" height="60px">
-            </div>
-            <form class="form">
-                <h3><input type="text" name="first" placeholder="Type What You See"></h3>
-            </form>
-            <form id="form">
-                <h3><input type="checkbox">&nbsp;I'm not a robot</h3>
-            </form>
-            <form id="box">
-                <input type="image" src="./Assets/recaptcha.png" alt="image" width="50px" height="50px">
-            </form>
-            <div id="capt"></div>
-            <form id="button">
-                <div><a href="valentine1.html"><input type="button" value="submit"></a></div>
+        <div id="container" class="container">
+            <div><img src="https://aniketphapal.github.io/GoogleDoc-/gift.webp" alt="gif" width="250px" height="250px"></div>
+        </div>
+        <div id="head">
+            <h1 id="robo">I know you are not a robot cutie pie.</h1>
+            <br>
+            <h1 id="pookie">You are my pookie!!!!</h1>
+            <br>
+            <h1 id="chutku">My Sweet little chutku!!!!</h1>
+            <br>
+            <h1 id="bacha">My bacha!!</h1>
+            <br>
+            <h1 id="my">My Vidhudaa!!!</h1>
+        </div>
+        <div id="click">
+            <form>
+                <a href="v.html"><input type="button" value="Click Here"></a>
             </form>
         </div>
     </body>
