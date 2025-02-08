@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>My Valentine</title>
+        <style>
+            body, html {
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+            #bg {
+                background-color: lightblue;
+                height: 100%;
+                width: 100%;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #robot {
+                background-color: white;
+                height: 410px;
+                width: 400px;
+                border: 2px solid black;
+            }
+            .robot{
+                position: absolute;
+                top: 100px;
+            }
+            #img {
+                position: absolute;
+                top: -21px;
+                filter: brightness(120%);
+            }
+            .form {
+                position: absolute;
+                top: 300px;
+            }
+            #form {
+                position: absolute;
+                top: 370px;
+                border: 2px solid black;
+                padding: 5px;
+                width: 250px;
+                height: 50px;
+                text-align: center left;
+            }
+            #capt {
+                position: absolute;
+                top: 355px;
+            }
+            #button {
+                border: 2px solid white;
+                position: absolute;
+                top: 450px;
+            }
+            #re {
+                position: absolute;
+                top: 106px;
+            }
+            #box {
+                position: absolute;
+                top: 375px;
+                left: 820px;
+            }
+            #form:hover {
+                background-color: black;
+                color: white;
+            }
+            #button:hover {
+                border: 5px solid white;
+            }
+            @media screen and (max-width: 600px) {
+                #box{
+                    position: absolute;
+                    left: 320px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="bg"></div>
+        <div class="container">
+            <div id="robot" class="robot">
+                <h1 id="img"><img src="./Assets/captcha1.png" alt="image" width="400px" height="300px"></h1>
+            </div>
+            <div id="re">
+                <img src="./Assets/recaptcha1.png" alt="image" width="150px" height="60px">
+            </div>
+            <form class="form">
+                <h3><input type="text" name="first" placeholder="Type What You See"></h3>
+            </form>
+            <form id="form">
+                <h3><input type="checkbox">&nbsp;I'm not a robot</h3>
+            </form>
+            <form id="box">
+                <input type="image" src="./Assets/recaptcha.png" alt="image" width="50px" height="50px">
+            </form>
+            <div id="capt"></div>
+            <form id="button">
+                <div><a href="valentine1.html"><input type="button" value="submit"></a></div>
+            </form>
+        </div>
+    </body>
+</html>
